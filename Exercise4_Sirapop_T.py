@@ -4,11 +4,11 @@ This is GPA calculation Program for student
 x = input("Student First name   :")
 y = input("Student Last  name   :")
 print("----------------------------")
-print("For example, Student XXX Grade : 4, 3.50, 3, 1.5, 0")
-englishGrade    = float(input("Student English    Grade :"))
-gBusinessGrade  = float(input("Student Business   Grade :"))
-comSystemGrade  = float(input("Student ComSystem  Grade :"))
-comProgramGrade = float(input("Student ComProgram Grade :"))
+print("For example, Student XXX Grade : A,B,C,D,F")
+englishGrade    = input("Student English    Grade :")
+gBusinessGrade  = input("Student Business   Grade :")
+comSystemGrade  = input("Student ComSystem  Grade :")
+comProgramGrade = input("Student ComProgram Grade :")
 
 print("----------------------------")
 print("---Your score---")
@@ -20,6 +20,47 @@ print("----------------")
 
 ''' Here is a sum total of your grades and divide by the number of subjects 
 which have enrolled in this semester'''
+if englishGrade == "A":
+    englishGrade = 4.00
+if englishGrade == "B":
+    englishGrade = 3.00
+if englishGrade =="C":
+    englishGrade = 2.00
+if englishGrade == "D":
+    englishGrade = 1.00
+if englishGrade == "F":
+    englishGrade = 0.00
+if gBusinessGrade == "A":
+    gBusinessGrade = 4.00
+if gBusinessGrade =="B":
+    gBusinessGrade = 3.00
+if gBusinessGrade == "C":
+    gBusinessGrade = 2.00
+if gBusinessGrade == "D":
+    gBusinessGrade = 1.00
+if gBusinessGrade == "F":
+    gBusinessGrade = 0.00
+if comSystemGrade == "A":
+    comSystemGrade = 4.00
+if comSystemGrade =="B":
+    comSystemGrade = 3.00
+if comSystemGrade == "C":
+    comSystemGrade = 2.00
+if comSystemGrade == "D":
+    comSystemGrade = 1.00
+if comSystemGrade == "F":
+    comSystemGrade = 0.00
+if comProgramGrade == "A":
+    comProgramGrade = 4.00
+if comProgramGrade =="B":
+    comProgramGrade = 3.00
+if comProgramGrade == "C":
+    comProgramGrade = 2.00
+if comProgramGrade == "D":
+    comProgramGrade = 1.00
+if comProgramGrade == "F":
+    comProgramGrade = 0.00
+
 numberSubject       = 4
 result = (englishGrade + gBusinessGrade+ comSystemGrade + comProgramGrade)/numberSubject
 summary = (englishGrade + gBusinessGrade+ comSystemGrade + comProgramGrade)/numberSubject >= 2.00
