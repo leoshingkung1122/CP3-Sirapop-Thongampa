@@ -47,42 +47,15 @@ def menu1():
     figureCost = megumin + yami + reimu
     print("---------------------------------------------------------------------")
     print("Total Cost :", figureCost, "Bath")
-    print("---------------------------")
-    tCost = figureCost + applianceCost + hItemCost
-    print("--Select your Service transportation--")
-    print("---------------------------")
-    print("1) EMS                                   : 45   Bath")
-    print("2) Airjet Speed                          : 900  Bath")
-    print("3) Shop owner come to your destination   : 2000 Bath")
-    print("-------Please be noted input only an integer following the list-------")
-    transportInput = int(input("Please select the Transportation : "))
+    showtransport()
+    tCost = transportCalculate() + figureCost
     address = input("Please inform you item destination : ")
-    if transportInput == 1:
-        transportCost = 45
-        print("---------------------------------------------------------------------")
-        print("Total cost :", transportCost + tCost, "Bath")
-        print("Your item destination is :", address)
-        print("---------------------------------------------------------------------")
-        print("Thank you for shopping")
-        print("---------------------------------------------------------------------")
-
-    if transportInput == 2:
-        transportCost = 900
-        print("---------------------------------------------------------------------")
-        print("Total cost :", transportCost + tCost, "Bath")
-        print("Your item destination is :", address)
-        print("---------------------------------------------------------------------")
-        print("Thank you for shopping")
-        print("---------------------------------------------------------------------")
-
-    if transportInput == 3:
-        transportCost = 2000
-        print("---------------------------------------------------------------------")
-        print("Total cost :", transportCost + tCost, "Bath")
-        print("Your item destination is :", address)
-        print("---------------------------------------------------------------------")
-        print("Thank you for shopping")
-        print("---------------------------------------------------------------------")
+    print("---------------------------------------------------------------------")
+    print("Total cost :", tCost, "Bath")
+    print("Your item destination is :", address)
+    print("---------------------------------------------------------------------")
+    print("Thank you for shopping")
+    print("---------------------------------------------------------------------")
 
 
 def menu2():
@@ -103,42 +76,15 @@ def menu2():
     applianceCost = pToShirt + pToCap + reimuShirt + annonymousMask
     print("---------------------------------------------------------------------")
     print("Total Cost :", applianceCost, "Bath")
-    print("---------------------------")
-    tCost = figureCost + applianceCost + hItemCost
-    print("--Select your Service transportation--")
-    print("---------------------------")
-    print("1) EMS                                   : 45   Bath")
-    print("2) Airjet Speed                          : 900  Bath")
-    print("3) Shop owner come to your destination   : 2000 Bath")
-    print("-------Please be noted input only an integer following the list-------")
-    transportInput = int(input("Please select the Transportation : "))
+    showtransport()
+    tCost = transportCalculate() + applianceCost
     address = input("Please inform you item destination : ")
-    if transportInput == 1:
-        transportCost = 45
-        print("---------------------------------------------------------------------")
-        print("Total cost :", transportCost + tCost, "Bath")
-        print("Your item destination is :", address)
-        print("---------------------------------------------------------------------")
-        print("Thank you for shopping")
-        print("---------------------------------------------------------------------")
-
-    if transportInput == 2:
-        transportCost = 900
-        print("---------------------------------------------------------------------")
-        print("Total cost :", transportCost + tCost, "Bath")
-        print("Your item destination is :", address)
-        print("---------------------------------------------------------------------")
-        print("Thank you for shopping")
-        print("---------------------------------------------------------------------")
-
-    if transportInput == 3:
-        transportCost = 2000
-        print("---------------------------------------------------------------------")
-        print("Total cost :", transportCost + tCost, "Bath")
-        print("Your item destination is :", address)
-        print("---------------------------------------------------------------------")
-        print("Thank you for shopping")
-        print("---------------------------------------------------------------------")
+    print("---------------------------------------------------------------------")
+    print("Total cost :", tCost, "Bath")
+    print("Your item destination is :", address)
+    print("---------------------------------------------------------------------")
+    print("Thank you for shopping")
+    print("---------------------------------------------------------------------")
 
 
 def menu3():
@@ -159,42 +105,15 @@ def menu3():
         hItemCost = hDojin + hDvd + hPoster
         print("---------------------------------------------------------------------")
         print("Total Cost :", hItemCost, "Bath")
-        print("---------------------------")
-        tCost = figureCost + applianceCost + hItemCost
-        print("--Select your Service transportation--")
-        print("---------------------------")
-        print("1) EMS                                   : 45   Bath")
-        print("2) Airjet Speed                          : 900  Bath")
-        print("3) Shop owner come to your destination   : 2000 Bath")
-        print("-------Please be noted input only an integer following the list-------")
-        transportInput = int(input("Please select the Transportation : "))
+        showtransport()
+        tCost = transportCalculate() + hItemCost
         address = input("Please inform you item destination : ")
-        if transportInput == 1:
-            transportCost = 45
-            print("---------------------------------------------------------------------")
-            print("Total cost :", transportCost + tCost, "Bath")
-            print("Your item destination is :", address)
-            print("---------------------------------------------------------------------")
-            print("Thank you for shopping")
-            print("---------------------------------------------------------------------")
-
-        if transportInput == 2:
-            transportCost = 900
-            print("---------------------------------------------------------------------")
-            print("Total cost :", transportCost + tCost, "Bath")
-            print("Your item destination is :", address)
-            print("---------------------------------------------------------------------")
-            print("Thank you for shopping")
-            print("---------------------------------------------------------------------")
-
-        if transportInput == 3:
-            transportCost = 2000
-            print("---------------------------------------------------------------------")
-            print("Total cost :", transportCost + tCost, "Bath")
-            print("Your item destination is :", address)
-            print("---------------------------------------------------------------------")
-            print("Thank you for shopping")
-            print("---------------------------------------------------------------------")
+        print("---------------------------------------------------------------------")
+        print("Total cost :", tCost, "Bath")
+        print("Your item destination is :", address)
+        print("---------------------------------------------------------------------")
+        print("Thank you for shopping")
+        print("---------------------------------------------------------------------")
 
     else:
         print("---------------------------------------------------------------------")
@@ -202,7 +121,6 @@ def menu3():
         print("---------------------------------------------------------------------")
         showMenu()
         selectMenu()
-
 
 def menu4():
     print("---------------------------------------------------------------------")
@@ -228,6 +146,25 @@ def checkLogin():
          print("---------------------------")
          print("Please sign in again")
          checkLogin()
+
+def transportCalculate():
+    transportInput = int(input("Please select the Transportation : "))
+    if transportInput == 1:
+        return 45
+    if transportInput == 2:
+        return 900
+    if transportInput == 3:
+        return 2000
+
+def showtransport():
+    print("---------------------------")
+    print("--Select your Service transportation--")
+    print("---------------------------")
+    print("1) EMS                                   : 45   Bath")
+    print("2) Airjet Speed                          : 900  Bath")
+    print("3) Shop owner come to your destination   : 2000 Bath")
+    print("-------Please be noted input only an integer following the list-------")
+
 
 
 print("---------------------------")
