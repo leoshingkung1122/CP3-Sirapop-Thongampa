@@ -178,6 +178,19 @@ tCost = 0
 
 checkLogin()
 selectMenu()
+print("Do you want to continue shopping more ? :")
+print("-------Please be noted input only an integer following the list-------")
+print("1) Go back to menu")
+print("2) Exit")
+continueShopping = int(input("Answer : "))
+if continueShopping == 1:
+    showMenu()
+    selectMenu()
+if continueShopping == 2:
+    print("You have logged out successfully")
+
+
+
 
 
 
