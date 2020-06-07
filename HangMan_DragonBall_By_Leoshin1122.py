@@ -1,4 +1,9 @@
 dragonBall = True
+check_1_D = 0
+check_2_D = 0
+check_3_D = 0
+check_4_D = 0
+check_pro_D = False
 
 def guessInput():
     guess = input("guess : ")
@@ -41,9 +46,18 @@ def showMenuDragonChoice():
     for x in range(4):
         x += 1
         print(str(x) + ")", "Problem", x)
+        if check_1_D == 1 and x == 1:
+            print("(--You have clear problem",x,"--)")
+        if check_2_D == 1 and x == 2:
+            print("(--You have clear problem",x,"--)")
+        if check_3_D == 1 and x == 3:
+            print("(--You have clear problem", x, "--)")
+        if check_4_D == 1 and x == 4:
+            print("(--You have clear problem", x, "--)")
+    print("5) See the answer but you cannot get the reward")
 
 def guess_5_letter_word():
-    lifepoint = 3
+    lifepoint = 5
     guess = ""
     round = 0
     lap_1_1 = 0
@@ -78,7 +92,7 @@ def guess_5_letter_word():
     lap_3_1235 = 0
 
 
-
+    print("(----Please be noted input an only one low-case letter----)")
     print("_____")
     while guess != letter_1 and guess != letter_2 and guess != letter_3 and guess != letter_4 and guess != letter_5:
         guess = input("guess : ")
@@ -983,12 +997,22 @@ def guess_5_letter_word():
         guessCorrect()
         print("The Answer is :",letter_1+letter_2+letter_3+letter_4+letter_5)
         print("----------------You won--------------------")
+        return 1
 
     if lifepoint == 0:
-        print("The Answer is :", letter_1 + letter_2 + letter_3 + letter_4 + letter_5)
+        return 0
 
 while dragonBall == True:
     showMenuDragonChoice()
+    if check_1_D == 1 and check_2_D == 1 and check_3_D == 1 and check_4_D == 1 and check_pro_D == False:
+        print("------------------------------------------------")
+        print("Congratulations!!!!!!!!!!!")
+        print("You are very genius")
+        print("Behalf of the God_Shin")
+        print("I will give you a reward")
+        print("https://www.pinterest.com/manbeast6964849/mr-satan/")
+        print("This reward is appropriate for the guy who can answer all question in the Dragonball part")
+        print("--------------------------------------------------")
     problemSelect = float(input("Selcet Choice : "))
     if problemSelect == 1:
         letter_1 = "b"
@@ -996,7 +1020,10 @@ while dragonBall == True:
         letter_3 = "l"
         letter_4 = "m"
         letter_5 = "a"
-        guess_5_letter_word()
+        if guess_5_letter_word() == 1:
+            check_1_D = 1
+        else:
+            check_1_D = 0
         if returnHangmanD() == True:
             dragonBall = True
         else:
@@ -1008,7 +1035,10 @@ while dragonBall == True:
         letter_3 = "h"
         letter_4 = "a"
         letter_5 = "n"
-        guess_5_letter_word()
+        if guess_5_letter_word() == 1:
+            check_2_D = 1
+        else:
+            check_2_D = 0
         if returnHangmanD() == True:
             dragonBall = True
         else:
@@ -1020,27 +1050,45 @@ while dragonBall == True:
         letter_3 = "d"
         letter_4 = "e"
         letter_5 = "l"
-        guess_5_letter_word()
+        if guess_5_letter_word() == 1:
+            check_3_D = 1
+        else:
+            check_3_D = 0
         if returnHangmanD() == True:
             dragonBall = True
         else:
             dragonBall = False
 
     if problemSelect == 4:
-        letter_1 = "s"
-        letter_2 = "a"
-        letter_3 = "t"
-        letter_4 = "a"
-        letter_5 = "n"
-        guess_5_letter_word()
+        letter_1 = "b"
+        letter_2 = "r"
+        letter_3 = "o"
+        letter_4 = "l"
+        letter_5 = "y"
+        if guess_5_letter_word() == 1:
+            check_4_D = 1
+        else:
+            check_4_D = 0
         if returnHangmanD() == True:
             dragonBall = True
         else:
             dragonBall = False
 
-    if problemSelect < 1 or problemSelect > 4:
+    if problemSelect == 5:
+        print("The answer of problem 1 : bulma")
+        print("The answer of problem 2 : gohan")
+        print("The answer of problem 3 : videl")
+        print("The answer of problem 4 : broly")
+        check_pro_D = True
+        if returnHangmanD() == True:
+            dragonBall = True
+        else:
+            dragonBall = False
+
+    if problemSelect < 1 or problemSelect >= 6:
         print("-----------------------")
         print("You have selected incorrectly")
+
 
 print("---------------Thank you for playing---------------------")
 print("You can contact me at https://github.com/leoshingkung1122")
