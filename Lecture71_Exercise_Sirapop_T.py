@@ -6,10 +6,9 @@ def showBill():
     totalCost = 0
     print("Bill".center(20,"-"))
     for x in range(len(menuList)):
-        print(menuList[x],"cost    :",costList[x])
-    for y in range(len(costList)):
-        totalCost += costList[y]
-    print("Total Price :",totalCost)
+        print(menuList[x],"cost  :",costList[x])
+        totalCost += costList[x]
+    print("Total Price : ",totalCost)
 
 
 while True:
