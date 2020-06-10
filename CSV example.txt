@@ -1,0 +1,5 @@
+Name,Favorite Movie,Favorite Pet
+Wat,Harry Potter,Dog
+Tee,Overgear,Cat
+Beat,Your name,Globlin
+Junior,Dragonball,Pet robot
